@@ -1,17 +1,27 @@
 <template>
   <div class="list">
-    <div>
-      <div class="card">
-        <h2 class="card-title">Название рецепта</h2>
+    <div v-if="recipes.length">
+      <div
+          class="card"
+          :key="index.id"
+          v-for="(recipe, index) of recipes"
+          @click="$emit('select', recipe.id)"
+      >
+        <h2 class="card-title">{{recipe.title}}</h2>
       </div>
     </div>
 
-    <p class="center">Нет рецептов. Добавьте первый</p>
+    <p v-else class="center">Нет рецептов. Добавьте первый</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    recipes: {
+      type: Array,
+    }
+  }
 
 }
 </script>
