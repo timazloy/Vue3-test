@@ -1,24 +1,13 @@
 # vue
 
-## Project setup
+## Как запустить
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Описание
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+Переписал простеньки проект с Option API на Composition API
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
