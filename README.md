@@ -8,6 +8,6 @@ npm run serve
 
 ### Описание
 ```
-Переписал простенькиq проект с Option API на Composition API
+Переписал простой проект с Option API на Composition API
 ```
 
