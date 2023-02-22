@@ -10,19 +10,21 @@
 </template>
 
 <script>
+import {useToggle} from "@/composition/toggle";
+import {watch} from "vue";
+
 export default {
   props: {
     recipe: Object,
   },
-  data() {
-    return {
-      visible: false
-    }
-  },
-  methods: {
-    toggle() {
-      this.visible = !this.visible
-    }
+  setup(props) {
+    const {visible, toggle} = useToggle()
+
+    watch(() => props.recipe, () => {
+      visible.value = false
+    })
+
+    return {visible, toggle}
   },
   watch: {
     recipe() {
